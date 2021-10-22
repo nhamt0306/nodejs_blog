@@ -8,6 +8,12 @@ const port = 3000;
 //Để sử dụng được đường dẫn tĩnh
 app.use(express.static(path.join(__dirname,'public'))); //Lúc này để truy cập chỉ cần /f8_icon.png
 
+//Sử dụng cho method post dữ liệu lên server
+app.use(express.urlencoded({
+  extended: true
+}))
+app.use(express.json())
+
 //Template engine - handlebars
 app.engine('hbs', handlebars({
   extname : ".hbs"
