@@ -35,6 +35,6 @@ app.use(morgan('combined'));
 // Route init
 route(app);
 
-    app.listen(port, () => {
+app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`);
-            });
+});
